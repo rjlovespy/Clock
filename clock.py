@@ -3,11 +3,6 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 
-"""
-1 tick of hour hand = 12 ticks of minute hand = 720 ticks of second hand.
-Therefore for every tick of hour hand, 
-the hour, minute, second hands rotate by 6, 72, 4320 degrees respectively.
-"""
 t1 = np.linspace(-3*np.pi/2, -243*np.pi/2, 360)
 t2 = np.linspace(-3*np.pi/2, -7*np.pi/2, 360)
 t3 = np.linspace(-3*np.pi/2, -5*np.pi/3, 360)
