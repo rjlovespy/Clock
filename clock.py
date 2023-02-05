@@ -3,6 +3,11 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 
+"""
+1 tick of hour hand = 12 ticks of minute hand = 720 ticks of second hand.
+Therefore for every tick of hour hand, 
+the hour, minute, second hands rotate by 6, 72, 4320 degrees respectively.
+"""
 t1 = np.linspace(-3*np.pi/2, -243*np.pi/2, 360)
 t2 = np.linspace(-3*np.pi/2, -7*np.pi/2, 360)
 t3 = np.linspace(-3*np.pi/2, -5*np.pi/3, 360)
@@ -32,7 +37,7 @@ def update(i):
 
 
 anime=ani.FuncAnimation(fig,update,frames=len(t1), interval=200,blit=True,repeat=False)
-circle= plt.Circle((0,0),1.25,fc="gold",ec="blue",lw=15)
+circle= plt.Circle((0,0),1.25,fc="yellow",ec="purple",lw=45)
 ax.add_patch(circle)
 ax.spines["left"].set_visible(False)
 ax.spines["right"].set_visible(False)
@@ -53,6 +58,6 @@ plt.annotate("9",(np.cos(-np.pi),np.sin(-np.pi)),color="black")
 plt.annotate("10",(np.cos(-7*np.pi/6),np.sin(-7*np.pi/6)),color="black")
 plt.annotate("11",(np.cos(-4*np.pi/3),np.sin(-4*np.pi/3)),color="black")
 plt.annotate("12",(np.cos(-3*np.pi/2),np.sin(-3*np.pi/2)),color="black")
-plt.annotate("Courtesy of Rishikesh Jha",(1,-1),color="fuchsia")
+plt.annotate("Courtesy of Rishikesh Jha",(1,-1),color="crimson")
 plt.axis("scaled")
 plt.show()
